@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Navbar } from '../Components/Navbar/navbar';
+import { NavBar } from '../Components/Navbar/navbar';
 import { Home } from '../Home/Home';
 
 
 export const MyRoutes = () => {
   return (
     <BrowserRouter> 
-        <Navbar/>
+        <NavBar/>
 
         <Routes>
             <Route path='/' element={ <Home/> } />
