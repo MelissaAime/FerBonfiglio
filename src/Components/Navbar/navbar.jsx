@@ -1,26 +1,26 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import {Container, Nav, Navbar, Form, Button} from 'react-bootstrap';
 
 export const NavBar = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar fixed="top" expand="lg" className='nav'>
       <Container>
-        <Navbar.Brand href="#home">Fer Bonfiglio</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" bg="light"/>
+        <Navbar.Brand href="#home" className='nav-title'>Fer Bonfiglio</Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <NavDropdown title="Projects" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Youtube</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Sound Cloud</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Spotify</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">All projects</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#link">Contact</Nav.Link>
+            <Nav.Link href="#home" className='nav-text'>Home</Nav.Link>
+            <Nav.Link href="#project" className='nav-text'>Projects</Nav.Link>
+            <Nav.Link href="#link" className='nav-text'>Contact</Nav.Link>
           </Nav>
+        <Form className="d-flex">
+            <Form.Control
+            type="search"
+            placeholder="Search"
+            className="me-2"
+            aria-label="Search"
+            />
+            <Button variant="outline" className='nav-search-button'>Search</Button>
+        </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
