@@ -1,0 +1,10 @@
+.projects{
+    max-width: 100vw;
+    height: 540px;
+    background-color: var(--background);
+
+    &-title{
+        color: var(--light);
+        padding: 2rem 3rem;
+    }
+}
