@@ -8,11 +8,13 @@ export const MyRoutes = () => {
   return (
     <BrowserRouter> 
         <NavBar/>
+        <Home/>
+        <Body/>
 
-        <Routes>
+        {/* <Routes>
             <Route path='/' element={ <Home/> } />
             <Route path='/presentation' element={ <Body/> } />
-        </Routes>
+        </Routes> */}
     </BrowserRouter> 
   );
 }
