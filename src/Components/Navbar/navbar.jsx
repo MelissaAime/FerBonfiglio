@@ -11,8 +11,8 @@ export const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home" className='nav-text'>Home</Nav.Link>
-            <Nav.Link href="#project" className='nav-text'>Projects</Nav.Link>
-            <Nav.Link href="#link" className='nav-text'>Contact</Nav.Link>
+            <Nav.Link href="#projects" className='nav-text'>Projects</Nav.Link>
+            <Nav.Link href="#contact" className='nav-text'>Contact</Nav.Link>
           </Nav>
         <Form className="d-flex">
             <Form.Control

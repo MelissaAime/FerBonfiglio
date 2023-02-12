@@ -1,6 +1,6 @@
 export const Body = () =>{
     return(
-        <div className="body">
+        <div className="body"  id="home">
             <img src="" alt="" className="body-img"/>
             <div className="body-container">
                 <h1 className="body-container-title">Fer Bonfiglio</h1>
