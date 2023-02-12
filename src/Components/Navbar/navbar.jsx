@@ -1,10 +1,12 @@
 import {Container, Nav, Navbar, Form, Button} from 'react-bootstrap';
+import logo from "../../Assets/Images/logo.png";
 
 export const NavBar = () => {
   return (
     <Navbar fixed="top" expand="lg" className='nav'>
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" bg="light"/>
+        <img src={logo} alt='logo' className='navbar-img'/>
         <Navbar.Brand href="#home" className='nav-title'>Fer Bonfiglio</Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
