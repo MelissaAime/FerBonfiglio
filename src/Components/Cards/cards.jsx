@@ -8,7 +8,7 @@ export const Cards = ({title, text, image, alt}) => {
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{text}</Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button className='card-button'>Go somewhere</Button>
       </Card.Body>
     </Card>
   );

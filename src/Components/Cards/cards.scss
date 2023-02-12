@@ -1,0 +1,10 @@
+.card-button{
+    background: var(--primary);
+    border: none;
+    color: var(--background);
+
+    &:hover{
+        color: var(--light);
+        background-color: var(--background);
+    }
+}
