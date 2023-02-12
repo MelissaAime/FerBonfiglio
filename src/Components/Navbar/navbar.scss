@@ -40,6 +40,10 @@
     color: var(--primary);
 }
 
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
 .navbar-img{
     width: 2.3rem;
     height: 2.3rem;
@@ -49,5 +53,25 @@
         width: 2.5rem;
         height: 2.5rem;
         margin: auto 1.9rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .nav{
+        background: var(--primary);
+
+        &-text{
+            color: var(--light);
+        }
+
+        &-text:hover{
+            color: var(--background);
+            border-bottom: none;
+        }
+
+    }
+
+    .navbar-nav .nav-link.active {
+        color: var(--background);
     }
 }
