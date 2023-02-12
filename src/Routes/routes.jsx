@@ -5,6 +5,7 @@ import { Home } from '../Sections/Home/Home';
 import { Body } from '../Sections/Body/Body';
 import { Projects } from '../Sections/Projects/Projects';
 import { Contact } from '../Sections/Contact/Contact';
+import { Footer } from '../Sections/Footer/Footer';
 
 
 export const MyRoutes = () => {
@@ -15,6 +16,7 @@ export const MyRoutes = () => {
         <Body/>
         <Projects/>
         <Contact/>
+        <Footer/>
 
         {/* <Routes>
             <Route path='/' element={ <Home/> } />
