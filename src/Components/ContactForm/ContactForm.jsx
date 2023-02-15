@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Form, Button} from 'react-bootstrap';
+import { BsCursor } from 'react-icons/bs';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -25,23 +26,23 @@ export const ContactForm = () => {
 
   return (
     <Form onSubmit={handleSubmit} className='contact-form'> 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-4">
             <Form.Label htmlFor="name">Name:</Form.Label>
             <Form.Control type="text" id="name" value={name} onChange={handleNameChange} required />
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-4">
             <Form.Label htmlFor="email">Email:</Form.Label>
             <Form.Control type="email" id="email" value={email} onChange={handleEmailChange} required />
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-4">
             <Form.Label htmlFor="message">Message:</Form.Label>
-            <Form.Control as="textarea" rows={3} id="message" value={message} onChange={handleMessageChange} required />
+            <Form.Control as="textarea" rows={5} id="message" value={message} onChange={handleMessageChange} required />
         </Form.Group>
         
         <div className='contact-form-button'>
-            <Button type="submit" variant="dark">Submit</Button>
+            <Button type="submit"> Submit <BsCursor/></Button>
         </div>
     </Form>
 

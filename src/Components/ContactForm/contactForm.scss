@@ -1,3 +1,6 @@
+$color: #ff8a00;
+$darken: darken($color, 10%);
+
 .contact-form{
     margin: 5rem;
 
@@ -8,9 +11,26 @@
     &-button{
         display: flex;
         justify-content: center;
+        margin: 1rem;
 
         button{
-            width: 300px;
+            width: 200px;
+            background: var(--background);
+            color: var(--light);
+            font-weight: 600;
+            transition: 3ms;
+            border: none;
+            box-shadow: 0px 0px 5px 0px var(--background);
+
+            &:hover{
+                background: var(--primary);
+                color: var(--background);
+                box-shadow: 0px 0px 5px 0px var(--primary);
+            }
+
+            &:active{
+                background: $darken !important;
+            }
         }
     }
 }
