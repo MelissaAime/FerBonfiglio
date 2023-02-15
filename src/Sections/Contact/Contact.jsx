@@ -1,4 +1,5 @@
 import { BsChatText, BsInstagram, BsWhatsapp, BsSoundwave, BsYoutube, BsSpotify} from "react-icons/bs";
+import { ContactForm } from "../../Components/ContactForm/ContactForm";
 
 export const Contact = () => {
     
@@ -41,13 +42,15 @@ export const Contact = () => {
                     ))}
 
                     <div className="contact-box-info-footer"> 
-                        <a href=""><BsSoundwave/> </a>
-                        <a href=""><BsYoutube/> </a>
-                        <a href=""><BsSpotify/> </a>                       
+                        <a href="!#"><BsSoundwave/> </a>
+                        <a href="!#"><BsYoutube/> </a>
+                        <a href="!#"><BsSpotify/> </a>                       
                     </div>
 
                 </div>
-                <div className="contact-box-form"></div>
+                <div className="contact-box-form">
+                    <ContactForm/>
+                </div>
             </div>
         </div>
     )
