@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Form, Button} from 'react-bootstrap';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -23,21 +24,25 @@ export const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" value={name} onChange={handleNameChange} required />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" value={email} onChange={handleEmailChange} required />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" value={message} onChange={handleMessageChange} required></textarea>
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+    <Form onSubmit={handleSubmit}> 
+        <Form.Group className="mb-3" controlId="name">
+            <Form.Label htmlFor="name">Name:</Form.Label>
+            <Form.Control type="text" id="name" value={name} onChange={handleNameChange} required />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="email">
+            <Form.Label htmlFor="email">Email:</Form.Label>
+            <Form.Control type="email" id="email" value={email} onChange={handleEmailChange} required />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="message">
+            <Form.Label htmlFor="message">Message:</Form.Label>
+            <Form.Control as="textarea" rows={3} id="message" value={message} onChange={handleMessageChange} required />
+        </Form.Group>
+        
+        <Button type="submit" variant="dark">Submit</Button>
+    </Form>
+
   );
 };
 
