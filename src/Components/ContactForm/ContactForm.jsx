@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Form, Button} from 'react-bootstrap';
-import { BsCursor } from 'react-icons/bs';
+import { BsCursor, BsCursorFill } from 'react-icons/bs';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -24,6 +24,16 @@ export const ContactForm = () => {
     window.location.href = `mailto:contact@example.com?subject=Contact form submission&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
   };
 
+  const [icon, setIcon] = useState(<BsCursor />);
+  
+  const handleClick = () => {
+    if (icon.type === BsCursor) {
+      setIcon(<BsCursorFill />);
+    } else {
+      setIcon(<BsCursor />);
+    }
+  };
+
   return (
     <Form onSubmit={handleSubmit} className='contact-form'> 
         <Form.Group className="mb-4">
@@ -42,7 +52,7 @@ export const ContactForm = () => {
         </Form.Group>
         
         <div className='contact-form-button'>
-            <Button type="submit"> Submit <BsCursor/></Button>
+            <Button type="submit" onClick={handleClick}> Submit {icon} </Button>
         </div>
     </Form>
 
