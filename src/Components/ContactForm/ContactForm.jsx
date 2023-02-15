@@ -24,25 +24,28 @@ export const ContactForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}> 
-        <Form.Group className="mb-3" controlId="name">
+    <Form onSubmit={handleSubmit} className='contact-form'> 
+        <Form.Group className="mb-3">
             <Form.Label htmlFor="name">Name:</Form.Label>
             <Form.Control type="text" id="name" value={name} onChange={handleNameChange} required />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="email">
+        <Form.Group className="mb-3">
             <Form.Label htmlFor="email">Email:</Form.Label>
             <Form.Control type="email" id="email" value={email} onChange={handleEmailChange} required />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="message">
+        <Form.Group className="mb-3">
             <Form.Label htmlFor="message">Message:</Form.Label>
             <Form.Control as="textarea" rows={3} id="message" value={message} onChange={handleMessageChange} required />
         </Form.Group>
         
-        <Button type="submit" variant="dark">Submit</Button>
+        <div className='contact-form-button'>
+            <Button type="submit" variant="dark">Submit</Button>
+        </div>
     </Form>
 
   );
 };
+
 

@@ -1,0 +1,16 @@
+.contact-form{
+    margin: 5rem;
+
+    label{
+        color: var(--light);
+    }
+
+    &-button{
+        display: flex;
+        justify-content: center;
+
+        button{
+            width: 300px;
+        }
+    }
+}
