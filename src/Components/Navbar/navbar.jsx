@@ -14,7 +14,7 @@ export const NavBar = () => {
             <Nav.Link href="#projects" className='nav-text'>Projects</Nav.Link>
             <Nav.Link href="#contact" className='nav-text'>Contact</Nav.Link>
           </Nav>
-        <Form className="d-flex">
+        {/* <Form className="d-flex">
             <Form.Control
             type="search"
             placeholder="Search"
@@ -22,7 +22,7 @@ export const NavBar = () => {
             aria-label="Search"
             />
             <Button variant="outline" className='nav-search-button'>Search</Button>
-        </Form>
+        </Form> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
